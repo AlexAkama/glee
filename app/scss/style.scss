@@ -1,0 +1,23 @@
+@import "vars";
+@import "fonts";
+@import "reset";
+@import "global";
+
+.header__inner {
+    height: 150px;
+}
+
+.header__inner,
+.menu__list,
+.nav__list,
+.user-nav__list,
+.footer-bottom,
+.short-menu__list {
+    @extend %flex--space-between--center;
+}
+
+.footer {
+    height: 100px;
+}
+
+@import "media";
