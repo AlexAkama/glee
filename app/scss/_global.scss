@@ -8,13 +8,13 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    color: $text-color;
 }
 
 .main {
     flex-grow: 1;
 }
 
-.footer,
-.header {
-    border: 5px solid #d81c1c;
+.footer-bottom {
+    height: 100%;
 }

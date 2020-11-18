@@ -5,6 +5,10 @@
 *.sublime*
 npm-degug.*
 
+# архивы
+*.zip
+*.rar
+
 # папка выхода
 dist/
 app/css/*

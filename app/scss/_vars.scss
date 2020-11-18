@@ -1,5 +1,19 @@
+$text-color: #7b7b7b;
+$menu-text-color: #436372;
+
+
 %flex--space-between--center {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+%Rubik-Regular {
+    font-family: "Rubik-Regular", sans-serif;
+    font-weight: 400;
+}
+
+%Rubik-Medium {
+    font-family: "Rubik-Medium", sans-serif;
+    font-weight: 500;
 }
