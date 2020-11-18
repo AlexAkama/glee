@@ -20,18 +20,16 @@
     @extend %flex--space-between--center;
 }
 
-.footer {
-    height: 100px;
-
-    @extend %Rubik-Regular;
-}
-
 .menu__list-item {
     font-size: 15px;
     text-transform: capitalize;
 
     a {
         color: $menu-text-color;
+
+        &:hover {
+            color: $accsent-color;
+        }
     }
 
     & + & {
@@ -44,14 +42,6 @@
         position: relative;
         width: 52px;
         height: 52px;
-    }
-
-    &__list-img {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        display: block;
-        transform: translate(-50%, -50%);
     }
 
     &__search {
@@ -116,13 +106,30 @@
     &__add-menu {
         border-radius: 50%;
         background-color: $menu-text-color;
+
+        svg {
+            fill: #fff;
+        }
+    }
+
+    svg {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        display: block;
+        transform: translate(-50%, -50%);
+        transition: all 0.5s;
+
+        &:hover {
+            fill: $accsent-color;
+        }
     }
 
     &__favorites,
     &__cart {
         width: 65px;
 
-        & img {
+        svg {
             transform: translate(-88%, -27%);
         }
     }
@@ -135,7 +142,90 @@
     }
 }
 
+.footer {
+    height: 100px;
+
+    @extend %Rubik-Regular;
+}
+
+.footer-top {
+    &__item {
+        max-width: 270px;
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    &__contact-title {
+        text-transform: uppercase;
+    }
+
+    &__logo {
+        margin: 80px 0 30px;
+    }
+
+    &__list-item {
+        margin-bottom: 10px;
+
+        a {
+            color: $text-color;
+            transition: all 0.5s;
+
+            &:hover {
+                color: $accsent-color;
+            }
+        }
+    }
+
+    &__title {
+        margin: 95px 0 33px;
+        font-size: 16px;
+        line-height: 21px;
+        text-transform: uppercase;
+        color: #1f2044;
+
+        @extend %DMSans-Bold;
+    }
+
+    &__newsletter-text {
+        margin-bottom: 40px;
+    }
+
+    @extend %flex--space-between;
+}
+
+.subscribe {
+    height: 38px;
+
+    &__input {
+        border: none;
+        padding: 0 0 0 15px;
+        height: 100%;
+        background-color: $bg-color;
+
+        ::placeholder {
+            background-color: #234969;
+        }
+    }
+
+    &__btn {
+        margin-left: -5px;
+        border: none;
+        height: 100%;
+        text-transform: uppercase;
+        color: #fff;
+        background-color: $button-color;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $accsent-color;
+        }
+    }
+
+    @extend %DMSans-Regular;
+}
+
 .footer-bottom {
+    height: 100%;
     font-size: 14px;
 }
 
@@ -146,7 +236,7 @@
         color: $text-color;
 
         &:hover {
-            color: $menu-text-color;
+            color: $accsent-color;
         }
     }
 

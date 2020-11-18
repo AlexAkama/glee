@@ -1,6 +1,13 @@
 $text-color: #7b7b7b;
+$accsent-color: #f00;
 $menu-text-color: #436372;
+$bg-color: #fef7f0;
+$button-color: #a3bbc8;
 
+%flex--space-between {
+    display: flex;
+    justify-content: space-between;
+}
 
 %flex--space-between--center {
     display: flex;
@@ -9,11 +16,26 @@ $menu-text-color: #436372;
 }
 
 %Rubik-Regular {
-    font-family: "Rubik-Regular", sans-serif;
+    font-family: "Rubik-Regular";
     font-weight: 400;
 }
 
 %Rubik-Medium {
-    font-family: "Rubik-Medium", sans-serif;
+    font-family: "Rubik-Medium";
     font-weight: 500;
+}
+
+%DMSans-Regular {
+    font-family: "DMSans-Regular";
+    font-weight: 400;
+}
+
+%DMSans-Medium {
+    font-family: "DMSans-Medium";
+    font-weight: 500;
+}
+
+%DMSans-Bold {
+    font-family: "DMSans-Bold";
+    font-weight: 700;
 }
