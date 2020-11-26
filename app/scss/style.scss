@@ -37,6 +37,25 @@
     }
 }
 
+.servises-link:hover .servises-list,
+.pages-link:hover .pages-list {
+    transform: translate(-30px, 10px);
+}
+
+.servises-list,
+.pages-list {
+    position: absolute;
+    transition: all 0.5s;
+    transform: translate(-30px, -200%);
+    border: 1px solid $bezh-color;
+}
+
+.servises-list__item,
+.pages-list__item {
+    padding: 10px 30px;
+}
+
+
 .user-nav {
     &__list-item {
         position: relative;
@@ -141,6 +160,13 @@
         background-color: #fcd7b6;
     }
 }
+
+// ------------------------------------
+
+
+
+// ------------------------------------
+
 
 .footer {
     height: 100px;
