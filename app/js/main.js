@@ -8,6 +8,15 @@ $(function() {
         fade: true
     });
 
-    var designs = mixitup('.designs__items');
+    var products = mixitup('.products__items', {
+        selectors: {
+            control: '.products__button'
+        }
+    });
+    var designs = mixitup('.designs__items', {
+        selectors: {
+            control: '.designs__button'
+        }
+    });
 
 });

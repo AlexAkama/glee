@@ -366,7 +366,53 @@ li.slick-active {
 
 .products {
     &__items {
+        grid-gap: 30px;
         grid-template-columns: repeat(4, 1fr);
+        margin: 0 auto;
+        max-width: 1170px;
+    }
+}
+
+.products-item {
+    border-radius: 10px;
+    width: 100%;
+    height: 380px;
+    max-width: 270px;
+    box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05);
+    text-align: center;
+
+    &__img-wrapper {
+        position: relative;
+        display: block;
+        overflow: hidden;
+        margin-bottom: 20px;
+        width: 100%;
+        height: 100%;
+        max-width: 270px;
+        max-height: 270px;
+    }
+
+    &__img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__name {
+        height: 40px;
+        font-size: 16px;
+        color: $h2-color;
+
+        @extend %D-500;
+    }
+
+    &__price {
+        height: 40px;
+        font-size: 16px;
+        color: $button-color;
+
+        @extend %D-700;
     }
 }
 
