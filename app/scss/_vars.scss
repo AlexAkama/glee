@@ -1,9 +1,46 @@
-$text-color: #7b7b7b;
+$text-color: #8b8b8b;
 $accsent-color: #f00;
 $menu-text-color: #436372;
+$h2-color: #243f4d;
+$h3-color: #191919;
 $bg-color: #fef7f0;
 $button-color: #a3bbc8;
-$bezh-color:#fcd7b6;
+$bezh-color: #fcd7b6;
+
+%h2title {
+    font-size: 72px;
+    line-height: 70px;
+    color: $h2-color;
+
+    @extend %R-500;
+}
+
+%blue-btn {
+    position: relative;
+    color: #fff;
+    background-color: $button-color;
+
+    &::after {
+        content: "";
+        position: absolute;
+        right: 25px;
+        top: 50%;
+        z-index: 1;
+        width: 22px;
+        height: 9px;
+        background-image: url(../images/icons/button-arrow.svg);
+        transform: translateY(-50%);
+    }
+
+    @extend %R-500;
+    @extend %bg;
+}
+
+%bg {
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 
 %flex--space-between {
     display: flex;
@@ -16,27 +53,27 @@ $bezh-color:#fcd7b6;
     justify-content: space-between;
 }
 
-%Rubik-Regular {
-    font-family: "Rubik-Regular";
+%R-400 {
+    font-family: "Rubik-Regular", sans-serif;
     font-weight: 400;
 }
 
-%Rubik-Medium {
-    font-family: "Rubik-Medium";
+%R-500 {
+    font-family: "Rubik-Medium", sans-serif;
     font-weight: 500;
 }
 
-%DMSans-Regular {
-    font-family: "DMSans-Regular";
+%D-400 {
+    font-family: "DMSans-Regular", sans-serif;
     font-weight: 400;
 }
 
-%DMSans-Medium {
-    font-family: "DMSans-Medium";
+%D-500 {
+    font-family: "DMSans-Medium", sans-serif;
     font-weight: 500;
 }
 
-%DMSans-Bold {
-    font-family: "DMSans-Bold";
+%D-700 {
+    font-family: "DMSans-Bold", sans-serif;
     font-weight: 700;
 }
