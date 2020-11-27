@@ -364,7 +364,7 @@ li.slick-active {
         }
 
         &:hover::before {
-            animation: dying 2s 1;
+            animation: dying 1s 1;
         }
     }
 
@@ -463,6 +463,7 @@ li.slick-active {
         font-size: 15px;
         line-height: 12px;
         color: $menu-text-color;
+        transition: all 0.5s;
 
         &::after {
             content: "";
@@ -672,6 +673,8 @@ li.slick-active {
 }
 
 .designs {
+    margin-bottom: 120px;
+
     &__items {
         grid-gap: 25px;
         grid-template-columns: repeat(3, 1fr);
@@ -726,6 +729,67 @@ li.slick-active {
         &:hover {
             transform: scale(1.05);
         }
+    }
+}
+
+// ------------------------------------
+
+.video {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 500px;
+    background-image: url(../images/video-bg.jpg);
+
+    @extend %bg;
+}
+
+.play-btn {
+    position: relative;
+    z-index: 200;
+    display: block;
+    cursor: pointer;
+
+    &__img {
+        position: relative;
+        z-index: 205;
+    }
+
+    &__layer {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        border-radius: 50%;
+        background-color: #90d8ff;
+        transform: translate(-50%, -50%);
+    }
+
+    &__layer-0 {
+        z-index: 204;
+        width: 70px;
+        height: 70px;
+        background-color: $button-color;
+    }
+
+    &__layer-1 {
+        z-index: 203;
+        width: 85px;
+        height: 85px;
+        opacity: 0.5;
+    }
+
+    &__layer-2 {
+        z-index: 202;
+        width: 100px;
+        height: 100px;
+        opacity: 0.37;
+    }
+
+    &__layer-3 {
+        z-index: 201;
+        width: 115px;
+        height: 115px;
+        opacity: 0.24;
     }
 }
 
