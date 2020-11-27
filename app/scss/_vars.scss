@@ -19,6 +19,7 @@ $bezh-color: #fcd7b6;
     position: relative;
     color: #fff;
     background-color: $button-color;
+    transition: all 0.5s;
 
     &::after {
         content: "";
@@ -30,6 +31,10 @@ $bezh-color: #fcd7b6;
         height: 9px;
         background-image: url(../images/icons/button-arrow.svg);
         transform: translateY(-50%);
+    }
+
+    &:hover {
+        background-color: $menu-text-color;
     }
 
     @extend %R-500;
