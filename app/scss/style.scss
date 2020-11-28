@@ -42,21 +42,31 @@
 
 .servises-link:hover .servises-list,
 .pages-link:hover .pages-list {
-    transform: translate(-30px, 10px);
+    border-top: 5px solid $bezh-color;
+    box-shadow: 0 10px 50px 0 #0003;
+    font-size: 15px;
+    opacity: 1;
+    transition: all 0.3s;
+
+    &__item {
+        padding: 10px 30px;
+    }
 }
 
 .servises-list,
 .pages-list {
     position: absolute;
     z-index: 10;
-    border: 1px solid $bezh-color;
+    font-size: 0;
     background-color: #fff;
-    transform: translate(-30px, -200%);
-    transition: all 0.5s;
+    opacity: 0;
+    transition: all 0.3s;
+
+    &__item {
+        transition: all 0.3s;
+    }
 }
 
-.servises-list__item,
-.pages-list__item,
 .user-menu__item {
     padding: 10px 30px;
 }
@@ -222,7 +232,7 @@
     width: 200px;
     text-transform: uppercase;
     background-color: #fff;
-    transform: translate(200%) rotate(360deg);
+    transform: translate(100px, -120px) rotate(360deg) scale(0);
     transition: all 0.5s;
 
     &__item {
