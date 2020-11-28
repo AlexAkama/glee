@@ -760,36 +760,201 @@ li.slick-active {
         left: 50%;
         top: 50%;
         border-radius: 50%;
-        background-color: #90d8ff;
+        background-color: #3d78aa;
         transform: translate(-50%, -50%);
+        transition: all 0.5s;
     }
 
     &__layer-0 {
         z-index: 204;
         width: 70px;
         height: 70px;
-        background-color: $button-color;
+        background-color: #f00;
     }
 
     &__layer-1 {
         z-index: 203;
-        width: 85px;
-        height: 85px;
+        width: 100px;
+        height: 100px;
         opacity: 0.5;
+        animation: play 2s infinite alternate-reverse;
     }
 
     &__layer-2 {
         z-index: 202;
-        width: 100px;
-        height: 100px;
+        width: 130px;
+        height: 130px;
         opacity: 0.37;
+        animation: play 2s infinite alternate-reverse;
     }
 
     &__layer-3 {
         z-index: 201;
-        width: 115px;
-        height: 115px;
+        width: 160px;
+        height: 160px;
         opacity: 0.24;
+        animation: play 2s infinite alternate-reverse;
+    }
+
+    &:hover {
+        .play-btn__layer-0 {
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+    }
+}
+
+@keyframes play {
+    0% {
+        transform: translate(-50%, -50%) scale(0.4);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+// ------------------------------------
+
+.blog {
+    margin-top: 120px;
+    background: linear-gradient(to top, $bg-color 60%, transparent 50%);
+
+    &__top {
+        @extend %flex--space-between--center;
+        @extend %D-700;
+    }
+
+    &__title {
+        margin-bottom: 45px;
+        font-size: 36px;
+        color: $h3-color;
+    }
+
+    &__link {
+        font-size: 16px;
+        color: $h3-color;
+    }
+}
+
+.articles {
+    display: grid;
+    grid-gap: 25px;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 auto;
+    max-width: 1170px;
+}
+
+.article {
+    border-radius: 5px;
+    max-width: 356px;
+    box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05);
+    background-color: #fff;
+    transition: all 0.3s;
+    cursor: pointer;
+
+    &__img-wrapper {
+        overflow: hidden;
+        height: 250px;
+    }
+
+    &__img-wrapper img {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__text-wrapper {
+        position: relative;
+        display: block;
+        padding-bottom: 70px;
+        height: calc(100% - 250px);
+    }
+
+    &__status {
+        display: inline-block;
+        margin-left: 30px;
+        border-radius: 20px;
+        padding: 10px 30px;
+        text-transform: uppercase;
+        color: #fff;
+        background-color: $button-color;
+        transform: translateY(-50%);
+
+        @extend %D-700;
+    }
+
+    &__text {
+        padding: 0 30px;
+        font-size: 18px;
+        color: $h3-color;
+
+        @extend %D-500;
+    }
+
+    &__info {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: 0 27px;
+        border-top: 1px solid #e0e0e0;
+        padding: 20px 0;
+        font-size: 12px;
+        line-height: 12px;
+        text-transform: uppercase;
+        color: $h2-color;
+
+        @extend %R-400;
+    }
+
+    &__date {
+        &::before {
+            background: url(../images/icons/calendar.svg);
+        }
+    }
+
+    &__autor {
+        margin-left: 30px;
+        max-width: 160px;
+        white-space: nowrap;
+
+        &::before {
+            background: url(../images/icons/user.svg);
+        }
+    }
+
+    &:hover {
+        transform: scale(1.03);
+    }
+
+    &__date,
+    &__autor {
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
+        padding-left: 15px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 3px;
+            top: 1px;
+            display: block;
+            width: 9px;
+            height: 9px;
+
+            @extend %bg;
+        }
+    }
+}
+
+.clients {
+    background-color: $bg-color;
+
+    &__inner {
+        justify-content: space-around;
+        height: 270px;
+
+        @extend %flex--space-between--center;
     }
 }
 
