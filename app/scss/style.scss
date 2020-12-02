@@ -253,6 +253,51 @@
 
 // ------------------------------------
 
+.page-title {
+    padding: 35px 0;
+    background-color: #edf1f4;
+
+    &__text {
+        margin-bottom: 15px;
+        font-size: 36px;
+        line-height: 24px;
+        text-align: center;
+        color: $h2-color;
+
+        @extend %R-300;
+    }
+}
+
+.breadcrumbs {
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    line-height: 24px;
+
+    &__item-link {
+        color: $text-color;
+
+        &:hover {
+            color: $accsent-color;
+        }
+    }
+
+    &__item {
+        &::after {
+            content: "\a0/\a0";
+        }
+
+        &:last-child::after {
+            content: none;
+        }
+    }
+
+    @extend %R-400;
+}
+
+// ------------------------------------
+// ------------------------------------
+
 .slider {
     background-color: $bezh-color;
 
@@ -1088,10 +1133,4 @@ li.slick-active {
     100% {
         top: 12px;
     }
-}
-
-// ------------------------------------
-
-.page-title {
-    
 }

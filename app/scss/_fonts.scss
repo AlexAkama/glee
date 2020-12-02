@@ -1,5 +1,16 @@
 @font-face {
     src:
+        local("Rubik-Light"),
+        url("../fonts/Rubik-Light.woff2") format("woff2"),
+        url("../fonts/Rubik-Light.woff") format("woff");
+    font-family: "Rubik-Light";
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    src:
         local("Rubik-Regular"),
         url("../fonts/Rubik-Regular.woff2") format("woff2"),
         url("../fonts/Rubik-Regular.woff") format("woff");
