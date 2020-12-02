@@ -315,7 +315,7 @@
     &__item-title {
         margin-bottom: 45px;
 
-        @extend %h2title;
+        @extend %h2-title;
     }
 
     &__item-text {
@@ -882,8 +882,6 @@ li.slick-active {
 
     &__title {
         margin-bottom: 45px;
-        font-size: 36px;
-        color: $h3-color;
     }
 
     &__link {
@@ -903,6 +901,7 @@ li.slick-active {
 .article {
     display: flex;
     flex-direction: column;
+    margin: 0 auto;
     border-radius: 5px;
     max-width: 356px;
     box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05);
@@ -918,7 +917,6 @@ li.slick-active {
     }
 
     &__status {
-        display: inline-block;
         align-self: flex-start;
         margin-left: 30px;
         border-radius: 20px;
@@ -1110,6 +1108,225 @@ li.slick-active {
         }
     }
 }
+
+// ------------------------------------
+//
+// ABOUT
+//
+// ------------------------------------
+
+.about-result {
+    margin: 120px 0;
+
+    &__inner {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    &__img {
+        margin-left: auto;
+    }
+
+    &__text-wrapper {
+        margin-top: 90px;
+        padding-left: 20px;
+        max-width: 570px;
+        color: $h2-color;
+    }
+
+    &__experience {
+        display: flex;
+        align-items: flex-end;
+    }
+
+    &__experience-digit {
+        font-size: 140px;
+        line-height: 114px;
+        color: #a3bbc8;
+
+        @extend %R-700;
+    }
+
+    &__experience-text {
+        margin-left: 25px;
+        max-width: 100px;
+
+        @extend %text;
+    }
+
+    &__title {
+        margin: 35px 0;
+        line-height: 1;
+        color: inherit;
+
+        @extend %h3-title;
+    }
+
+    &__text {
+        margin-bottom: 55px;
+        line-height: 30px;
+
+        @extend %R-400;
+    }
+
+    &__digits {
+        border-top: 2px solid #e6eaf0;
+        padding-top: 40px;
+        color: $h2-color;
+
+        @extend %flex--space-between--center;
+    }
+
+    &__digit {
+        position: relative;
+        padding-left: 70px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            display: block;
+            width: 45px;
+            height: 45px;
+            transform: translateY(-50%);
+
+            @extend %bg-contain;
+        }
+    }
+
+    &__projects::before {
+        background-image: url(../images/icons/note.svg);
+    }
+
+    &__revenue::before {
+        background-image: url(../images/icons/rupor.svg);
+    }
+
+    &__avards::before {
+        background-image: url(../images/icons/medal.svg);
+    }
+
+    &__digit-title {
+        @extend %h3-title;
+    }
+
+    &__digit-text {
+        color: #4c4c4c;
+
+        @extend %D-700;
+    }
+}
+
+.about-advantages {
+    padding: 90px 0;
+    background-color: $bezh-color;
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    &__item {
+        position: relative;
+        padding-top: 100px;
+        text-align: center;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 12px;
+            display: block;
+            width: 80px;
+            height: 80px;
+            transform: translateX(-50%);
+
+            @extend %bg-contain;
+        }
+
+        &:hover::before {
+            animation: dying 1s 1;
+        }
+    }
+
+    &__clients::before {
+        background-image: url(../images/icons/about-clients.svg);
+    }
+
+    &__products::before {
+        background-image: url(../images/icons/about-products.svg);
+    }
+
+    &__time::before {
+        background-image: url(../images/icons/about-time.svg);
+    }
+
+    &__brands::before {
+        background-image: url(../images/icons/about-brands.svg);
+    }
+
+    &__title {
+        @extend %h3-title;
+    }
+
+    &__text {
+        font-size: 18px;
+        line-height: 36px;
+        color: $h2-color;
+
+        @extend %D-700;
+    }
+}
+
+.about-team {
+    margin: 120px 0;
+
+    &__inner {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 100px;
+    }
+
+    &__title {
+        @extend %h3-title;
+    }
+
+    &__text {
+        @extend %text;
+    }
+
+    &__list {
+        display: grid;
+        grid-column-gap: 30px;
+        grid-row-gap: 100px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__list-item {
+        overflow: hidden;
+        margin: 0 auto;
+    }
+
+    &__list-item-img {
+        width: 100%;
+        height: 320px;
+        object-fit: cover;
+        transition: all 0.5s;
+
+        &:hover {
+            transform: scale(1.07);
+        }
+    }
+
+    &__list-item-text {
+        background-color: #0f0;
+    }
+}
+
+// ------------------------------------
 
 @import "media";
 

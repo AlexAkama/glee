@@ -7,12 +7,28 @@ $bg-color: #fef7f0;
 $button-color: #a3bbc8;
 $bezh-color: #fcd7b6;
 
-%h2title {
+%h2-title {
     font-size: 72px;
     line-height: 70px;
     color: $h2-color;
 
     @extend %R-500;
+}
+
+%h3-title {
+    font-size: 36px;
+    line-height: 36px;
+    color: $h2-color;
+
+    @extend %D-700;
+}
+
+%text {
+    font-size: 16px;
+    line-height: 30px;
+    color: $h2-color;
+
+    @extend %R-400;
 }
 
 %blue-btn {
@@ -47,6 +63,12 @@ $bezh-color: #fcd7b6;
     background-repeat: no-repeat;
 }
 
+%bg-contain {
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
 %flex--space-between {
     display: flex;
     justify-content: space-between;
@@ -71,6 +93,11 @@ $bezh-color: #fcd7b6;
 %R-500 {
     font-family: "Rubik-Medium", sans-serif;
     font-weight: 500;
+}
+
+%R-700 {
+    font-family: "Rubik-Bold", sans-serif;
+    font-weight: 700;
 }
 
 %D-400 {

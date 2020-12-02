@@ -33,6 +33,17 @@
 
 @font-face {
     src:
+        local("Rubik-Bold"),
+        url("../fonts/Rubik-Bold.woff2") format("woff2"),
+        url("../fonts/Rubik-Bold.woff") format("woff");
+    font-family: "Rubik-Bold";
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    src:
         local("DMSans-Regular"),
         url("../fonts/DMSans-Regular.woff2") format("woff2"),
         url("../fonts/DMSans-Regular.woff") format("woff");
