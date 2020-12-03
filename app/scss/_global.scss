@@ -25,9 +25,7 @@ body {
     display: block;
 }
 
-.h3title {
-    font-size: 36px;
-    color: $h3-color;
-
-    @extend %D-700;
+.blog__title--page,
+.blog__link--page {
+    color: $h2-color !important;
 }
