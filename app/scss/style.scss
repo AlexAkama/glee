@@ -69,6 +69,7 @@
 
 .user-menu__item {
     padding: 10px 30px;
+    cursor: pointer;
 }
 
 .user-nav {
@@ -330,9 +331,7 @@
     }
 
     &__item-link {
-        display: inline-block;
         margin-bottom: 50px;
-        padding: 25px 100px 25px 30px;
 
         @extend %blue-btn;
     }
@@ -991,11 +990,14 @@ li.slick-active {
 }
 
 .clients {
-    justify-content: space-around;
-    height: 250px;
     background-color: $bg-color;
 
-    @extend %flex--space-between--center;
+    &__inner {
+        justify-content: space-around;
+        height: 250px;
+
+        @extend %flex--space-between--center;
+    }
 }
 
 // ------------------------------------
@@ -1287,22 +1289,29 @@ li.slick-active {
     &__inner {
         display: grid;
         grid-template-columns: 1fr 2fr;
-        gap: 100px;
+        gap: 30px;
     }
 
     &__title {
+        margin-bottom: 35px;
+
         @extend %h3-title;
     }
 
     &__text {
+        margin-bottom: 40px;
+
         @extend %text;
+    }
+
+    &__link {
+        @extend %blue-btn;
     }
 
     &__list {
         display: grid;
-        grid-column-gap: 30px;
-        grid-row-gap: 100px;
         grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
     }
 
     &__list-item {
@@ -1310,7 +1319,7 @@ li.slick-active {
         margin: 0 auto;
     }
 
-    &__list-item-img {
+    &__item-img {
         width: 100%;
         height: 320px;
         object-fit: cover;
@@ -1321,8 +1330,72 @@ li.slick-active {
         }
     }
 
-    &__list-item-text {
-        background-color: #0f0;
+    &__item-text {
+        padding: 0 20px;
+        width: 100%;
+        height: 110px;
+        max-width: 320px;
+        box-shadow: 0 6px 57px 0 rgba(37, 37, 37, 0.05);
+        background-color: #fff;
+        transform: translateY(-50%);
+
+        @extend %flex--space-between--center;
+    }
+
+    &__name {
+        font-size: 22px;
+        line-height: 26px;
+        color: $menu-text-color;
+
+        @extend %D-700;
+    }
+
+    &__position {
+        font-size: 16px;
+        line-height: 30px;
+        color: $h2-color;
+
+        @extend %R-400;
+    }
+
+    &__social-links {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__social-link {
+        position: relative;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-color: #f6f6f6;
+        transition: all 0.5s;
+
+        &:hover {
+            background-color: $button-color;
+        }
+    }
+
+    &__social-link + &__social-link {
+        margin-left: 7px;
+    }
+}
+
+.instagram {
+    background-image: url(../images/icons/instagram-grey.svg);
+
+    &:hover {
+        background-image: url(../images/icons/instagram-white.svg);
+    }
+}
+
+.google {
+    background-image: url(..//images/icons/google-grey.svg);
+
+    &:hover {
+        background-image: url(..//images/icons/google-white.svg);
     }
 }
 
