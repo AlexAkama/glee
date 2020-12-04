@@ -1434,13 +1434,13 @@ li.slick-active {
     &__submit-btn {
         display: block;
         margin: 5px 0 30px;
-        border: none;
+        border: 2px solid transparent;
         padding: 18px 0;
         width: 100%;
         font-size: 18px;
         color: #fff;
         background-color: $button-color;
-        transition: all 0.5s;
+        transition: all 0.3s;
         cursor: pointer;
 
         &:hover {
@@ -1473,29 +1473,27 @@ li.slick-active {
 
     &__create-link {
         display: block;
-        border: 2px solid $button-color;
         padding: 20px 0;
         width: 100%;
         font-size: 18px;
         text-align: center;
-        color: $menu-text-color;
         transition: all 0.5s;
 
         &:hover {
             color: #fff;
             background-color: $button-color;
-
-            .modal__submit-btn {
-                border: 2px solid $button-color;
-                color: $menu-text-color;
-                background-color: transparent;
-            }
         }
 
         @extend %R-500;
     }
 
     @extend %R-400;
+}
+
+.modal--simple-btn {
+    border: 2px solid $button-color;
+    color: $menu-text-color;
+    background-color: transparent;
 }
 
 // ------------------------------------

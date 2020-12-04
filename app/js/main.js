@@ -1,5 +1,12 @@
 $(function() {
 
+    $('.modal__create-link').on('mouseover', function(e) {
+        $('.modal__submit-btn').addClass('modal--simple-btn')
+    });
+    $('.modal__create-link').on('mouseleave', function(e) {
+        $('.modal__submit-btn').removeClass('modal--simple-btn')
+    });
+
     $('.slider').slick({
         dots: true,
         arrows: false,
