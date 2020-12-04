@@ -23,6 +23,14 @@ $bezh-color: #fcd7b6;
     @extend %D-700;
 }
 
+%h4-title {
+    font-size: 24px;
+    line-height: 40px;
+    color: $h2-color;
+
+    @extend %R-500;
+}
+
 %text {
     font-size: 16px;
     line-height: 30px;

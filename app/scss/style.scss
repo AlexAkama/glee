@@ -1499,6 +1499,35 @@ li.slick-active {
 }
 
 // ------------------------------------
+//
+// Terms & Conditions
+//
+// ------------------------------------
+
+.terms-n-conditions {
+    margin: 120px 0;
+}
+
+.tnc-block {
+    &__title {
+        margin-bottom: 10px;
+
+        @extend %h4-title;
+    }
+
+    &__list {
+        list-style-type: decimal-leading-zero;
+        padding-left: 28px;
+    }
+
+    &__text {
+        margin-bottom: 60px;
+
+        @extend %text;
+    }
+}
+
+// ------------------------------------
 
 @import "media";
 
