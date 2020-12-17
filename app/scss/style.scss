@@ -1517,7 +1517,7 @@ li.slick-active {
 
 // ------------------------------------
 //
-// Terms & Conditions
+//      Terms & Conditions
 //
 // ------------------------------------
 
@@ -1542,6 +1542,197 @@ li.slick-active {
 
         @extend %text;
     }
+}
+
+// ------------------------------------
+//
+//      Contact
+//
+// ------------------------------------
+
+.contact {
+    margin: 120px 0;
+    text-align: center;
+
+    &__title {
+        margin-bottom: 70px;
+        font-size: 35px;
+        line-height: 52px;
+        color: $menu-text-color;
+
+        @extend %D-700;
+    }
+
+    &__subtitle {
+        font-size: 16px;
+        line-height: 20px;
+        color: $button-color;
+
+        @extend %D-700;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 120px;
+    }
+
+    &__box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__form {
+        margin-right: 50px;
+        width: 620px;
+    }
+
+    .contact-form__textarea {
+        padding-top: 10px;
+    }
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid transparent;
+    width: 370px;
+    height: 370px;
+    background-color: #fbfbfb;
+
+    &__img-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 60px;
+        border-radius: 20px;
+        width: 80px;
+        height: 80px;
+        background-color: #fff;
+        transition: all 0.5s;
+
+        path {
+            fill: $button-color;
+            transition: all 0.5s;
+        }
+    }
+
+    &__title {
+        font-size: 20px;
+        line-height: 26px;
+        color: $h3-color;
+
+        @extend %D-700;
+    }
+
+    &__text {
+        font-size: 16px;
+        line-height: 30px;
+        color: #565872;
+
+        @extend %R-400;
+    }
+
+    &__email {
+        display: block;
+        color: inherit;
+    }
+
+    &:hover {
+        border: 1px solid $button-color;
+
+        .contact-item__img-box {
+            background-color: $button-color;
+
+            path {
+                fill: #fff;
+            }
+        }
+    }
+}
+
+.contact-form {
+    text-align: left;
+
+    &__box {
+        display: grid;
+        column-gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__input {
+        height: 50px;
+    }
+
+    &__textarea {
+        height: 180px;
+        resize: none;
+    }
+
+    &__submit-btn {
+        border: none;
+        text-transform: uppercase;
+
+        @extend %blue-btn;
+    }
+
+    &__label {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+
+        &::before {
+            content: "";
+            position: absolute;
+            right: 17px;
+            top: 17px;
+            z-index: 1;
+            display: block;
+            width: 18px;
+            height: 16px;
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    }
+
+    &__label--name::before {
+        background-image: url(../images/icons/contact/form-name.svg);
+    }
+
+    &__label--email::before {
+        background-image: url(../images/icons/contact/form-email.svg);
+    }
+
+    &__label--message::before {
+        background-image: url(../images/icons/contact/form-message.svg);
+    }
+
+    &__input,
+    &__textarea {
+        position: relative;
+        margin-bottom: 20px;
+        border: none;
+        padding: 0 50px 0 20px;
+        width: 100%;
+        font-size: 16px;
+        line-height: 30px;
+        color: #565872;
+        background-color: #fafafa;
+
+        &::placeholder {
+            text-transform: uppercase;
+        }
+
+        @extend %R-400;
+    }
+}
+
+#map {
+    width: 500px;
+    height: 330px;
 }
 
 // ------------------------------------
