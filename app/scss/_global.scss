@@ -14,7 +14,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    color: $text-color;
+    color: $default-color;
 }
 
 .main {
@@ -27,5 +27,21 @@ body {
 
 .blog__title--page,
 .blog__link--page {
-    color: $h2-color !important;
+    color: $base0-color;
+}
+
+.after-line {
+    position: relative;
+    display: inline-block;
+
+    &::after {
+        content: "";
+        position: absolute;
+        right: -56px;
+        top: 50%;
+        width: 40px;
+        height: 3px;
+        background-color: $base2-color;
+        transform: translateY(-50%);
+    }
 }

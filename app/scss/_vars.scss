@@ -1,16 +1,17 @@
-$text-color: #8b8b8b;
-$accsent-color: #f00;
-$menu-text-color: #436372;
-$h2-color: #243f4d;
-$h3-color: #191919;
+$base0-color: #243f4d;
+$base1-color: #436372;
+$base2-color: #a3bbc8;
+$base3-color: #eff1f4;
+$default-color: #8b8b8b;
+$accent-color: #f00;
+$dark-color: #191919;
 $bg-color: #fef7f0;
-$button-color: #a3bbc8;
 $bezh-color: #fcd7b6;
 
 %h2-title {
     font-size: 72px;
     line-height: 70px;
-    color: $h2-color;
+    color: $base0-color;
 
     @extend %R-500;
 }
@@ -18,7 +19,7 @@ $bezh-color: #fcd7b6;
 %h3-title {
     font-size: 36px;
     line-height: 36px;
-    color: $h2-color;
+    color: $base0-color;
 
     @extend %D-700;
 }
@@ -26,7 +27,7 @@ $bezh-color: #fcd7b6;
 %h4-title {
     font-size: 24px;
     line-height: 40px;
-    color: $h2-color;
+    color: $base0-color;
 
     @extend %R-500;
 }
@@ -34,7 +35,7 @@ $bezh-color: #fcd7b6;
 %text {
     font-size: 16px;
     line-height: 30px;
-    color: $h2-color;
+    color: $base0-color;
 
     @extend %R-400;
 }
@@ -44,7 +45,7 @@ $bezh-color: #fcd7b6;
     display: inline-block;
     padding: 25px 100px 25px 30px;
     color: #fff;
-    background-color: $button-color;
+    background-color: $base2-color;
     transition: all 0.5s;
 
     &::after {
@@ -60,7 +61,7 @@ $bezh-color: #fcd7b6;
     }
 
     &:hover {
-        background-color: $menu-text-color;
+        background-color: $base1-color;
     }
 
     @extend %R-500;
