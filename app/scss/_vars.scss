@@ -40,12 +40,12 @@ $bezh-color: #fcd7b6;
     @extend %R-400;
 }
 
-%blue-btn {
+%btn {
     position: relative;
     display: inline-block;
+    border: 1px solid $base2-color;
     padding: 25px 100px 25px 30px;
-    color: #fff;
-    background-color: $base2-color;
+    color: $base2-color;
     transition: all 0.5s;
 
     &::after {
@@ -56,16 +56,37 @@ $bezh-color: #fcd7b6;
         z-index: 1;
         width: 22px;
         height: 9px;
-        background-image: url(../images/icons/button-arrow.svg);
+        background-image: url(../images/icons/arrows/button-arrow-base2.svg);
         transform: translateY(-50%);
+
+        @extend %bg;
+    }
+
+    &:hover {
+        color: #fff;
+        background-color: $base2-color;
+
+        &::after {
+            background-image: url(../images/icons/arrows/button-arrow-white.svg);
+        }
+    }
+
+    @extend %R-500;
+}
+
+%blue-btn {
+    color: #fff;
+    background-color: $base2-color;
+
+    &::after {
+        background-image: url(../images/icons/arrows/button-arrow-white.svg);
     }
 
     &:hover {
         background-color: $base1-color;
     }
 
-    @extend %R-500;
-    @extend %bg;
+    @extend %btn;
 }
 
 %bg {
