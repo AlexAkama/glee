@@ -1,3 +1,6 @@
+// ------------------------------------
+//          COLORS
+// ------------------------------------
 $base0-color: #243f4d;
 $base1-color: #436372;
 $base2-color: #a3bbc8;
@@ -8,6 +11,28 @@ $dark-color: #191919;
 $bg-color: #fef7f0;
 $bezh-color: #fcd7b6;
 
+// ------------------------------------
+// ------------------------------------
+
+%after-line {
+    position: relative;
+    display: inline-block;
+
+    &::after {
+        content: "";
+        position: absolute;
+        right: -56px;
+        top: 50%;
+        width: 40px;
+        height: 3px;
+        background-color: $base2-color;
+        transform: translateY(-50%);
+    }
+}
+
+// ------------------------------------
+//          TEST STANDART
+// ------------------------------------
 %h2-title {
     font-size: 72px;
     line-height: 70px;
@@ -32,6 +57,22 @@ $bezh-color: #fcd7b6;
     @extend %R-500;
 }
 
+%h3-block-title {
+    font-size: 24px;
+    line-height: 36px;
+    color: $base1-color;
+
+    @extend %R-700;
+}
+
+%h6-title {
+    font-size: 16px;
+    line-height: 30px;
+    color: $base1-color;
+
+    @extend %R-700;
+}
+
 %text {
     font-size: 16px;
     line-height: 30px;
@@ -40,6 +81,9 @@ $bezh-color: #fcd7b6;
     @extend %R-400;
 }
 
+// ------------------------------------
+//          BUTTONS STANDART
+// ------------------------------------
 %btn {
     position: relative;
     display: inline-block;
@@ -89,6 +133,10 @@ $bezh-color: #fcd7b6;
     @extend %btn;
 }
 
+// ------------------------------------
+//              DISPLAYING
+// ------------------------------------
+
 %bg {
     background-position: center center;
     background-size: cover;
@@ -111,6 +159,10 @@ $bezh-color: #fcd7b6;
     align-items: center;
     justify-content: space-between;
 }
+
+// ------------------------------------
+//              FONTS
+// ------------------------------------
 
 %R-300 {
     font-family: "Rubik-Light", sans-serif;
@@ -146,6 +198,10 @@ $bezh-color: #fcd7b6;
     font-family: "DMSans-Bold", sans-serif;
     font-weight: 700;
 }
+
+// ------------------------------------
+//    Устранение какой=то проблемы
+// ------------------------------------
 
 @function max($numbers...) {
     @return m#{a}x(#{$numbers});

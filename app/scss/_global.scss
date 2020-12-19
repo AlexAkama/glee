@@ -16,32 +16,3 @@ body {
     justify-content: space-between;
     color: $default-color;
 }
-
-.main {
-    // flex-grow: 1;
-}
-
-.new-line {
-    display: block;
-}
-
-.blog__title--page,
-.blog__link--page {
-    color: $base0-color;
-}
-
-.after-line {
-    position: relative;
-    display: inline-block;
-
-    &::after {
-        content: "";
-        position: absolute;
-        right: -56px;
-        top: 50%;
-        width: 40px;
-        height: 3px;
-        background-color: $base2-color;
-        transform: translateY(-50%);
-    }
-}
