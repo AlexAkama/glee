@@ -1919,11 +1919,103 @@ li.slick-active {
     }
 }
 
-.autor {
+.author {
+    display: flex;
+    align-items: center;
+    justify-content: start;
     margin: 60px 0;
     border-top: 1px solid #ebebeb;
     border-bottom: 1px solid #ebebeb;
     padding: 25px 0;
+
+    &__img {
+        margin-right: 23px;
+        width: 77px;
+        height: 77px;
+        object-fit: cover;
+    }
+
+    &__box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    &__name {
+        margin-bottom: 10px;
+        color: $dark-color;
+
+        @extend %R-700;
+    }
+
+    &__position {
+        @extend %R-400;
+    }
+
+    &__info-box {
+        color: $dark-color;
+
+        span {
+            display: inline-block;
+            width: 50px;
+        }
+
+        @extend %R-400;
+    }
+
+    &__tags {
+        margin-bottom: 10px;
+    }
+
+    &__tags-item {
+        & + & {
+            &::before {
+                content: ",";
+            }
+        }
+    }
+
+    &__tags-link {
+        color: $default-color;
+
+        &:hover {
+            color: $accent-color;
+        }
+    }
+
+    &__social-item {
+        & + & {
+            margin-left: 20px;
+        }
+    }
+
+    &__social-link {
+        display: flex;
+        align-items: center;
+
+        path {
+            fill: $default-color;
+        }
+
+        &:hover {
+            path {
+                fill: $accent-color;
+            }
+        }
+    }
+
+    &__tags-list,
+    &__social-list {
+        display: flex;
+        align-items: center;
+        margin-left: 20px;
+    }
+
+    &__tags,
+    &__social {
+        display: flex;
+    }
 }
 
 .comments {
@@ -1939,8 +2031,6 @@ li.slick-active {
 }
 
 .comment {
-    // margin: 30px 0;
-
     &__box {
         display: flex;
         padding: 30px 0;
@@ -2027,9 +2117,17 @@ li.slick-active {
     }
 
     &__input {
-        padding: 0 20px;
+        padding: 0 50px 0 20px;
         width: 100%;
         height: 50px;
+    }
+
+    &__input--name[placeholder] {
+        background-image: url(../images/icons/form/user.svg);
+    }
+
+    &__input--email[placeholder] {
+        background-image: url(../images/icons/form/email.svg);
     }
 
     &__textarea {
@@ -2038,6 +2136,10 @@ li.slick-active {
         width: 100%;
         height: 120px;
         resize: none;
+    }
+
+    &__textarea[placeholder] {
+        background-image: url(../images/icons/form/message.svg);
     }
 
     &__submit-btn {
@@ -2064,6 +2166,12 @@ li.slick-active {
         color: $dark-color;
 
         @extend %R-400;
+    }
+
+    &__input[placeholder],
+    &__textarea[placeholder] {
+        background-position: calc(100% - 15px) 15px;
+        background-repeat: no-repeat;
     }
 
     &__input:focus,
