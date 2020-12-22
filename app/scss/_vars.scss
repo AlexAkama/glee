@@ -4,7 +4,8 @@
 $base0-color: #243f4d;
 $base1-color: #436372;
 $base2-color: #a3bbc8;
-$base3-color: #eff1f4;
+$base3-color: #c2d2db;
+$base4-color: #e3eaee;
 $default-color: #8b8b8b;
 $accent-color: #f00;
 $dark-color: #191919;
@@ -12,6 +13,19 @@ $bg-color: #fef7f0;
 $bezh-color: #fcd7b6;
 
 // ------------------------------------
+//      INPUT HIDE
+// ------------------------------------
+
+%input-hide {
+    position: absolute;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    clip: rect(0 0 0 0);
+}
+
+// ------------------------------------
+//          DECOR
 // ------------------------------------
 
 %after-line {
@@ -23,6 +37,7 @@ $bezh-color: #fcd7b6;
         position: absolute;
         right: -56px;
         top: 50%;
+        border: 1px solid $base3-color;
         width: 40px;
         height: 3px;
         background-color: $base2-color;
