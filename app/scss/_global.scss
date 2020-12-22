@@ -11,14 +11,86 @@ body {
     max-width: 1770px;
 }
 
-.page-container {
-    margin: 0 auto;
-    height: 100%;
-    max-width: 1170px;
+.page {
+    &__container {
+        margin: 0 auto;
+        height: 100%;
+        max-width: 1170px;
+    }
+
+    &__section {
+        margin: 120px 0;
+    }
+
+    &__pagination {
+        margin: 0 auto;
+        padding-top: 60px;
+        text-align: center;
+    }
 }
 
-.page-section {
-    margin: 120px 0;
+// ------------------------------------
+//
+//      PRODUCT CARD
+//
+// ------------------------------------
+
+.product-card {
+    border-radius: 10px;
+    width: 100%;
+    height: 380px;
+    max-width: 270px;
+    box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05);
+    text-align: center;
+
+    &__img-wrapper {
+        position: relative;
+        display: block;
+        overflow: hidden;
+        margin-bottom: 20px;
+        width: 100%;
+        height: 100%;
+        max-width: 270px;
+        max-height: 270px;
+    }
+
+    &__img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: all 0.5s;
+
+        &:hover {
+            transform: translate(-50%, -50%) scale(1.05);
+        }
+    }
+
+    &__name {
+        height: 40px;
+        font-size: 16px;
+        color: $base0-color;
+
+        @extend %D-500;
+    }
+
+    &__price {
+        height: 40px;
+        font-size: 16px;
+        color: $base2-color;
+
+        @extend %D-700;
+    }
+
+    &:hover {
+        .product-menu {
+            height: 45px;
+            max-width: 170px;
+            opacity: 1;
+            transform: translate(-50%, -100%);
+            transition: all 1s, max-width 0.5s 0.5s;
+        }
+    }
 }
 
 // ------------------------------------
@@ -386,4 +458,63 @@ body {
     }
 
     @extend %R-400;
+}
+
+// ------------------------------------
+//
+//              PAGINATION
+//
+// ------------------------------------
+
+.pagination {
+    display: inline-block;
+
+    &__list {
+        display: flex;
+    }
+
+    &__list-item {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        color: $base0-color;
+
+        span {
+            border: 1px solid transparent;
+        }
+
+        & + & {
+            margin-left: 20px;
+        }
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid $base2-color;
+        width: 100%;
+        height: 100%;
+        font-size: 16px;
+        line-height: 30px;
+        color: inherit;
+        transition: all 0.5s;
+
+        &:not(span):hover {
+            color: #fff;
+            background-color: $base1-color;
+        }
+
+        @extend %R-400;
+    }
+
+    &__list-item--active {
+        color: #fff;
+        background-color: $base2-color;
+    }
+
+    &__list-item--prev,
+    &__list-item--next {
+        width: 75px;
+    }
 }
