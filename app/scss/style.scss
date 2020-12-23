@@ -855,8 +855,10 @@ li.slick-active {
 
         &__img-wrapper {
             overflow: hidden;
+            margin: 0;
             border-top-left-radius: 5px;
             border-top-right-radius: 5px;
+            height: auto;
         }
 
         &__img {
@@ -909,11 +911,29 @@ li.slick-active {
             &::before {
                 background: url(../images/icons/info/calendar-grey.svg);
             }
+
+            &:hover::before {
+                background: url(../images/icons/info/calendar-accent.svg);
+            }
         }
 
         &__autor-link {
             &::before {
                 background-image: url(../images/icons/main/user-base1.svg);
+            }
+
+            &:hover::before {
+                background-image: url(../images/icons/main/user-accent.svg);
+            }
+        }
+
+        &__date,
+        &__autor-link {
+            color: $default-color;
+            transition: all 0.3s;
+
+            &:hover {
+                color: $accent-color;
             }
         }
     }
