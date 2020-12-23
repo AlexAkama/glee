@@ -11,7 +11,12 @@ npm-degug.*
 
 # папка выхода
 dist/
-app/css/*
+
+# минимизированные файлы
+app/css/style.min.css
+app/js/main.min.js
+
+# папка макетов
 maket/
 
 # папка плагинов

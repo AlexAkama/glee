@@ -1422,14 +1422,13 @@ li.slick-active {
     &__checkbox-input {
         position: absolute;
 
-        // TODO поставить input-hide
-        top: -20px;
-
         &:checked + .modal__checkbox-mark {
             background-image: url(../images/icons/check/check-mark-base1.svg);
 
             @extend %bg;
         }
+
+        @extend %input-hide;
     }
 
     &__checkbox-mark {
@@ -1437,7 +1436,7 @@ li.slick-active {
         left: 0;
         top: 1px;
         display: block;
-        border: 2px solid $menu-text-color;
+        border: 2px solid $base1-color;
         width: 14px;
         height: 14px;
     }
