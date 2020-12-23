@@ -334,6 +334,7 @@ body {
         border: 1px solid $base3-color;
         height: 5px;
         background-color: $base2-color;
+        transition: all 0.3s;
     }
 
     .irs-handle {
