@@ -969,7 +969,7 @@ li.slick-active {
             }
         }
 
-        &__autor-link {
+        &__author-link {
             &::before {
                 background-image: url(../images/icons/main/user-base1.svg);
             }
@@ -1725,7 +1725,7 @@ li.slick-active {
         //
 
         &__date,
-        &__autor-link {
+        &__author-link {
             color: #fff;
 
             &:hover {
@@ -1853,7 +1853,7 @@ li.slick-active {
         }
     }
 
-    &__autor-link {
+    &__author-link {
         margin-left: 30px;
         max-width: 140px;
         white-space: nowrap;
@@ -1887,7 +1887,7 @@ li.slick-active {
     }
 
     &__date,
-    &__autor-link {
+    &__author-link {
         position: relative;
         display: inline-block;
         overflow: hidden;
