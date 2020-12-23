@@ -507,37 +507,10 @@ li.slick-active {
     }
 
     &__link {
-        position: relative;
-        border: 1px solid $base2-color;
         border-radius: 5px;
         padding: 17px 86px 18px 20px;
-        font-size: 15px;
-        line-height: 12px;
-        color: $base1-color;
-        transition: all 0.5s;
 
-        &::after {
-            content: "";
-            position: absolute;
-            right: 0;
-            top: 50%;
-            display: inline-block;
-            width: 22px;
-            height: 9px;
-            background-image: url(../images/icons/arrow.svg);
-            transform: translate(-100%, -50%);
-        }
-
-        &:hover {
-            color: #fff;
-            background-color: $base2-color;
-        }
-
-        &:hover::after {
-            background-image: url(../images/icons/arrow-white.svg);
-        }
-
-        @extend %R-500;
+        @extend %blue-btn;
     }
 }
 
