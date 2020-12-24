@@ -1,5 +1,17 @@
 $(function() {
 
+    // INPUT STYLER
+    $('.product-one__input').styler();
+
+    // TABS
+    $('.product-one__tab-link').on('click', function(e) {
+        e.preventDefault();
+        $('.product-one__tab-link').removeClass('product-one__tab-link--active');
+        $('.product-one__tab-content-item').removeClass('product-one__tab-content-item--active');
+        $(e.target).addClass('product-one__tab-link--active');
+        $($(e.target).attr('href')).addClass('product-one__tab-content-item--active');
+    })
+
     // Переключение текста в добавить в корзину/избранное
     $('.action-box__input--cart').on('click', function() {
         if ($(this).is(':checked')) {
@@ -45,6 +57,31 @@ $(function() {
     });
 
     // SLICK SLIDER
+
+    $('.related-products__slider').slick({
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 1
+    });
+
+    $('.product-one__big-box').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: '.product-one__thumb-box'
+    });
+    $('.product-one__thumb-box').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        asNavFor: '.product-one__big-box',
+        dots: false,
+        centerMode: true,
+        focusOnSelect: true,
+        vertical: true,
+        arrows: false
+    });
+
 
     $('.slider').slick({
         dots: true,

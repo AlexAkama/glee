@@ -43,6 +43,7 @@ function scripts() {
             'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
             'node_modules/rateyo/min/jquery.rateyo.min.js',
             'node_modules/ion-rangeslider/js/ion.rangeSlider.min.js',
+            'node_modules/jquery-form-styler/dist/jquery.formstyler.js',
             'app/js/main.js'
         ])
         .pipe(concat('main.min.js'))
