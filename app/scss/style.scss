@@ -1356,6 +1356,137 @@ li.slick-active {
     }
 }
 
+.product-list {
+    .product-menu {
+        display: none;
+    }
+
+    .product-card {
+        display: flex;
+        align-items: center;
+        border-radius: 0;
+        height: auto;
+        max-width: 100%;
+        box-shadow: none;
+
+        &:not(:last-child) {
+            margin-bottom: 40px;
+        }
+
+        &__img-wrapper {
+            display: block;
+            margin: 0 60px 0 0;
+            border: 1px solid #f2f2f2;
+            height: 500px;
+            max-width: 370px;
+            max-height: 500px;
+            color: #fefefe;
+        }
+
+        &__text-wrapper {
+            text-align: left;
+        }
+
+        &__name {
+            margin-bottom: 15px;
+            font-size: 40px;
+            line-height: 1;
+        }
+
+        &__stars {
+            margin-bottom: 30px;
+        }
+
+        &__price {
+            margin-bottom: 15px;
+            font-size: 30px;
+            line-height: 1;
+            color: $base0-color;
+        }
+
+        &__annonce-text {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+.action-box {
+    display: flex;
+
+    &__label {
+        display: flex;
+        height: 50px;
+        cursor: pointer;
+
+        &:not(:last-child) {
+            margin-right: 20px;
+        }
+
+        &:hover {
+            .action-box__check {
+                border-radius: 5px;
+                background-image: none;
+                background-color: $base1-color;
+            }
+
+            .action-box__check-text {
+                padding: 0 35px;
+                font-size: 16px;
+                color: #fff;
+            }
+        }
+    }
+
+    &__input {
+        &:checked + .action-box__check {
+            background-color: $base2-color;
+
+            &:hover {
+                background-image: none;
+            }
+        }
+
+        &:checked + .action-box__check--cart {
+            background-image: url(../images/icons/check/card-white.svg);
+        }
+
+        &:checked + .action-box__check--fav {
+            background-image: url(../images/icons/check/heard-white.svg);
+        }
+
+        @extend %input-hide;
+    }
+
+    &__check {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        min-width: 50px;
+        box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05);
+        background-position: center;
+        background-size: 20px;
+        background-repeat: no-repeat;
+        transition: all 0.5s;
+    }
+
+    &__check--cart {
+        background-image: url(../images/icons/check/card-base2.svg);
+    }
+
+    &__check--fav {
+        background-image: url(../images/icons/check/heard-base2.svg);
+    }
+
+    &__check-text {
+        font-size: 0;
+        text-transform: uppercase;
+        transition: all 0.5s;
+
+        @extend %R-400;
+    }
+}
+
 // ------------------------------------
 //
 //                  LOGIN

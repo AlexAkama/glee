@@ -1,5 +1,21 @@
 $(function() {
 
+    // Переключение текста в добавить в корзину/избранное
+    $('.action-box__input--cart').on('click', function() {
+        if ($(this).is(':checked')) {
+            $('.action-box__check-text--cart').text('remove from cart');
+        } else {
+            $('.action-box__check-text--cart').text('add to cart');
+        }
+    });
+    $('.action-box__input--fav').on('click', function() {
+        if ($(this).is(':checked')) {
+            $('.action-box__check-text--fav').text('remove from favorites');
+        } else {
+            $('.action-box__check-text--fav').text('add to favorites');
+        }
+    });
+
     // RANGE SLIDER
     $('.price-filter__input').ionRangeSlider({
         onStart: function(data) {
